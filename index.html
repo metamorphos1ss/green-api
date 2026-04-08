@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREEN-API</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <span class="header-logo">GREEN-API</span>
+  </header>
+
+  <main class="layout">
+    <div class="left-col">
+      <div class="card">
+        <input class="input" type="text" id="idInstance" placeholder="idInstance">
+        <input class="input" type="text" id="apiToken" placeholder="ApiTokenInstance">
+      </div>
+
+      <div class="card">
+        <button class="btn" id="getSettingsBtn">getSettings</button>
+        <button class="btn" id="getStateBtn">getStateInstance</button>
+      </div>
+
+      <div class="card">
+        <p class="section-label">sendMessage</p>
+        <input class="input" type="text" id="sendPhone" placeholder="77771234567">
+        <textarea class="input textarea" id="messageText" placeholder="Hello World!"></textarea>
+        <button class="btn" id="sendMessageBtn">sendMessage</button>
+      </div>
+
+      <div class="card">
+        <p class="section-label">sendFileByUrl</p>
+        <input class="input" type="text" id="filePhone" placeholder="77771234567">
+        <input class="input" type="text" id="fileUrl" placeholder="https://my.site.com/img/horse.png">
+        <button class="btn" id="sendFileBtn">sendFileByUrl</button>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <p class="response-label">Ответ:</p>
+      <textarea class="response-area" id="responseArea" readonly></textarea>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
