@@ -1,0 +1,13 @@
+[Unit]
+Description=Green API webhook server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+EnvironmentFile=/var/www/green-api/.env
+ExecStart=/usr/bin/python3 /var/www/green-api/infra/webhook/webhook.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
