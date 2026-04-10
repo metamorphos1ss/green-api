@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deploy
-        run: curl -sf -X POST https://green-api.metairony.dev/webhook -H "Authorization: Bearer ${{ secrets.WEBHOOK_SECRET }}"
+        run: |
+          curl -sf -X POST https://green-api.metairony.dev/webhook -H "Authorization: Bearer ${{ secrets.WEBHOOK_SECRET }}"
 
   deploy-pages:
     runs-on: ubuntu-latest
